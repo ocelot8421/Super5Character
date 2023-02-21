@@ -1,0 +1,12 @@
+https://7esl.com/5-letter-words/#5_Letter_Words_with_A
+
+const lis = document.getElementsByTagName('li');
+const word5 = [];
+    // Loop through the NodeList object.
+    for (let i = 0; i <= lis.length - 1; i++) {
+        if (lis[i].textContent.length == 5) {
+            word5.push(lis[i].textContent)
+        }
+
+    }
+console.log(word5);
