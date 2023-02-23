@@ -30,6 +30,11 @@ public class Chooser {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return wordsList.get(new Random().nextInt(wordsList.size()));
+        return wordsList.get(
+                new Random()
+                        .nextInt(
+                                wordsList.size()
+                        )
+        );
     }
 }

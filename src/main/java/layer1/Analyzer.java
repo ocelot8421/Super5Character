@@ -13,16 +13,17 @@ public class Analyzer {
     public static int[] receiveData(String chosenWord, String answer) {
         int contain = 0;
         int bingo = 0;
-        int[] data = new int[2];
+        String answerSub;
         String[] answerSplit = answer.split("");
         String[] chosenSplit = chosenWord.split("");
         for (int i = 0; i < answerSplit.length; i++) {
-            String answerSub = answer.substring(0, i);
+            answerSub = answer.substring(0, i);
             if (chosenWord.contains(answerSplit[i])) {
                 if (Objects.equals(chosenSplit[i], answerSplit[i])) bingo++;
                 else if (!answerSub.contains(answerSplit[i])) contain++;
             }
         }
+        int[] data = new int[2];
         data[0] = bingo;
         data[1] = contain;
         return data;

@@ -17,11 +17,11 @@ public class Questioner {
      * @param repeatingQuestion A question that appears if the user does not write a 5-character word.
      * @return 5-character word.
      */
-    public static String askWord(String repeatingQuestion, String wordLength) {
-        int length = Integer.parseInt(wordLength);
+    public static String returnValidatedAnswer(String repeatingQuestion, String wordLength) {
         System.out.print("input: ");
         String answer = scanner.next();
         boolean isLowercase = Validator.isLowercase(answer);
+        int length = Integer.parseInt(wordLength);
         boolean isLength5 = Validator.isLengthCorrect(answer, length);
         while (!isLength5 || !isLowercase) {
             System.out.println(repeatingQuestion);
